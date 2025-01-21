@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            function Answer(button, status, feedbackId) {
+            const feedback = document.getElementById(feedbackId);
+            if (status) {
+                button.style.backgroundColor = 'green';
+                feedback.textContent = '¡Correcto!';
+                feedback.classList.add('correct');
+                feedback.classList.remove('incorrect');
+            } else {
+                button.style.backgroundColor = 'red';
+                feedback.textContent = 'Incorrecto';
+                feedback.classList.add('incorrect');
+                feedback.classList.remove('correct');
+            }
+        }
+
+            function FreeResponse(){
+                const input = document.getElementById("01");
+                const feedback = document.getElementById("02");
+                const correctAns = 'Hiraishin';
+
+                if (input.value.trim().toLowerCase() === correctAns.toLowerCase()){
+                    input.style.backgroundColor = 'green';
+                    feedback.textContent = '¡Correcto!';
+                    feedback.classList.add('correct');
+                    feedback.classList.remove('incorrect');
+                }
+                else{
+                    input.style.backgroundColor = 'red';
+                    feedback.textContent = 'Incorrecto';
+                    feedback.classList.add('incorrect');
+                    feedback.classList.remove('correct');
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <h3>¿En "Naruto", quien fue el primer humano en obtener chakra?</h3>
+                <button onclick="Answer(this, true, 'mc-feedback1')">Hagoromo</button>
+                <button onclick="Answer(this, false, 'mc-feedback1')">Kaguya</button>
+                <button onclick="Answer(this, false, 'mc-feedback1')">Indra</button>
+                <p id= "mc-feedback1"></p>
+
+                <h3>¿En "Naruto" cuales eran los 6 caminos del Sabio?</h3>
+                <button onclick="Answer(this, true, 'mc-feedback2')">Deva, Naraka, Preta, Animal, Asura, Humano</button>
+                <button onclick="Answer(this, false, 'mc-feedback2')">Deva, Naraka, Rinne, Animal, Tendra, Humano</button>
+                <button onclick="Answer(this, false, 'mc-feedback2')">Mazi, Nara, Preta, Goika, Asura, Humano</button>
+                <p id= "mc-feedback2"></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3>¿Como se llamaba la técnica que hizo famoso al Cuarto Hokage?</h3>
+                <input type="text" id="01" placeholder = "Escribe tu respuesta aquí">
+                <button onclick="FreeResponse()">Confirmar tu respuesta</button>
+                <p id="02"></p>
+            </div>
+        </div>
+    </body>
+</html>

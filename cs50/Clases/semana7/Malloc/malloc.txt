@@ -1,0 +1,54 @@
+I- ¿Qué es malloc?
+
+'malloc' significa "asignación de memoria". Es una función que se utiliza
+para asignar un bloque de memoria en el heap (una región de la memoria
+destinada para la asignación dinámica). A diferencia de las variables
+locales, que se asignan en el stack y se eliminan automáticamente cuando
+la función en la que fueron declaradas terminadas, la memoria asignada
+con 'malloc' permanece hasta que se libera explícitamente usando free.
+
+
+II- ¿Cómo se usa malloc?
+
+Para usar malloc, se debe especificar cuántos bytes de memoria se
+desean. Después de llamar a malloc, es una buena práctica verificar si
+la asignación de memoria fue exitosa. Si mallocno puede asignar la
+memoria, devolverá un puntero NULL.
+
+
+III- Explicacion del codigo "malloc.c"
+
+1. Declaración de puntero : int *ptr;— Aquí declaramos un puntero a
+   entero, que usaremos para apuntar al bloque de memoria asignado.
+
+2. Asignación de memoria :ptr = (int *)malloc(10 * sizeof(int));
+
+    - malloc(10 * sizeof(int)): Solicite un bloque de memoria suficiente para
+    almacenar 10 enteros. sizeof(int)se usa para obtener el tamaño en bytes
+    de un entero en el sistema, garantizando portabilidad.
+
+    - (int *): Realizamos un casting de tipo a int *, ya que malloc devuelve un
+    puntero de tipo void *, que no tiene tipo específico.
+
+3. Verificación de asignación : if (ptr == NULL)— Comprueba si
+   malloc devolvió NULL, lo cual indicaría que la asignación de memoria falló.
+
+4. Uso de la memoria asignada : Se utiliza la memoria para almacenar y
+   mostrar valores. En este caso, se almacenan los múltiplos de 2.
+
+5. Liberación de memoria : free(ptr);— Es fundamental liberar la memoria
+   asignada con malloc uso free para evitar fugas de memoria. Si no se
+   libera, el programa podría eventualmente quedarse sin memoria.
+
+IV- Notas importantes
+
+1. Memoria no inicializada : malloc no inicializa la memoria
+asignada. La memoria contendrá valores basura hasta que se les
+asigne un valor explícito. Para asignar memoria e inicializarla a
+cero, se puede usar calloc.
+
+2. Liberación de memoria : Cada vez que se usa malloc, se debe usar
+free para liberar la memoria. No hacerlo puede llevar a fugas de memoria.
+
+3. Reasignación de memoria : Si necesitas cambiar el tamaño del
+bloque de memoria asignado, puedes usar realloc.

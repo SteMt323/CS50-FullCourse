@@ -1,0 +1,227 @@
+/* Estilos globales */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #2c2c2c, #4a4a4a);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: white;
+    border-radius: 20px;
+    padding: 20px;
+    width: 80%;
+    max-width: 1000px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* Estilos del header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.header .logo {
+    display: flex;
+    align-items: center;
+}
+
+.header .logo span {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+}
+
+.header .nav-icons {
+    display: flex;
+    align-items: center;
+}
+
+.header .nav-icons a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.header .nav-icons i {
+    margin: 0 10px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.header .nav-icons i:hover {
+    color: #ff6347;
+}
+
+.header .search-bar {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 5px 10px;
+}
+
+.header .search-bar input {
+    border: none;
+    outline: none;
+    padding: 5px;
+}
+
+.header .search-bar i {
+    margin-left: 5px;
+    font-size: 16px;
+    color: #999;
+}
+
+.content {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.content h1 {
+    font-size: 60px;
+    margin: 0;
+    font-weight: bold;
+}
+
+.content h2 {
+    font-size: 40px;
+    margin: 10px 0;
+    color: #333;
+}
+
+.content .gaming-space {
+    display: inline-block;
+    background: white;
+    border-radius: 20px;
+    padding: 20px 30px;
+    font-size: 18px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    max-width: 80%;
+    text-align: left;
+}
+
+.content .home-space {
+    display: inline-block;
+    background: white;
+    border-radius: 20px;
+    padding: 20px 30px;
+    font-size: 18px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    max-width: 80%;
+    text-align: left;
+}
+
+.content .fitness-space {
+    display: inline-block;
+    background: white;
+    border-radius: 20px;
+    padding: 20px 30px;
+    font-size: 18px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    max-width: 80%;
+    text-align: left;
+}
+
+.content .code-space {
+    display: inline-block;
+    background: white;
+    border-radius: 20px;
+    padding: 20px 30px;
+    font-size: 18px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    max-width: 80%;
+    text-align: left;
+}
+
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    border-radius: 0px;
+    overflow: hidden;
+}
+
+.background-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.6);
+    opacity: 0.8;
+}
+
+.fitness-space p {
+    color: #333;
+    line-height: 1.6;
+    font-size: 18px;
+}
+
+.home-space p {
+    color: #333;
+    line-height: 1.6;
+    font-size: 18px;
+}
+
+.gaming-space p {
+    color: #333;
+    line-height: 1.6;
+    font-size: 18px;
+}
+.code-space p {
+    color: #333;
+    line-height: 1.6;
+    font-size: 18px;
+}
+
+body.gaming {
+    background: linear-gradient(to bottom, #1e1e1e, #303030);
+}
+
+.content h1.gaming-title {
+    color: #ff4500;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.content h2 {
+    color: #ff6347;
+}
+
+
+.nav-icons a {
+    transition: transform 0.3s, color 0.3s;
+}
+
+.nav-icons a:hover {
+    transform: scale(1.2);
+    color: #ff6347;
+}
+
+/* Animación de rebote */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+.nav-icons a.bounce {
+    animation: bounce 0.5s; /* Aplica la animación de rebote */
+}

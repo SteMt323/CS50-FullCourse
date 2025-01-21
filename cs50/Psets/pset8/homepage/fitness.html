@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fitness Section</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <div class="logo">
+                <span>CS50</span>
+                </div>
+                <div class="nav-icons">
+                    <a href="index.html"><i class="fas fa-home"></i></a>
+                    <a href="gaming.html"><i class="fas fa-gamepad"></i></a>
+                    <a href="fitness.html"><i class="fas fa-dumbbell"></i></a>
+                    <a href="code.html"><i class="fas fa-code"></i></a>
+                    <div class="search-bar">
+                        <input placeholder="Search..." type="text"/>
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content">
+                <h1>Fitness Zone</h1>
+                <h2>Welcome to the Real Section</h2>
+                <h2>'Fan of Real Reels'</h2>
+                <div class="fitness-space">
+                    <p>Como todo un gymrat que soy, mi hora favorita del dia son las 2 horas y media que le invierto al gym.</p>
+                    <p>Como a muchos de nosotros, es nuestro lugar seguro, en donde nos quitamos el peso intangible de las cosas frustrantes que nos pasan.</p>
+                    <p>#Real    #GymRat    #CBumSeRetira</p>
+                </div>
+            </div>
+
+            <div class="background-image">
+                <img alt="Fondo" height="500" src="https://i.pinimg.com/564x/b0/fa/98/b0fa98cecdcede58674e5aa89a447cee.jpg" width="1000"/>
+            </div>
+        </div>
+        <script>
+            // Selecciona todos los iconos
+            const icons = document.querySelectorAll('.nav-icons a');
+
+            icons.forEach(icon => {
+                icon.addEventListener('click', () => {
+                    // Añade una clase de animación
+                    icon.classList.add('bounce');
+
+                    // Remueve la clase después de 0.5 segundos
+                    setTimeout(() => {
+                        icon.classList.remove('bounce');
+                    }, 500);
+                });
+            });
+        </script>
+
+    </body>
+</html>

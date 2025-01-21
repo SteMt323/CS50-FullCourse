@@ -1,0 +1,48 @@
+sort1 uses: Bubble sort
+
+How do you know?: Este es el segundo algoritmo que mas dilato en ordenarse,
+sin embargo en la lista ordenada, este fue el mas rapido que el sort3.
+
+El algoritmo recorre la lista y compara los repetidamente los elementos de dicha lista
+y los intercambia si estan en el orden incorrecto
+Ex. [5, 3, 8, 4, 2]
+Ubiquemonos en la primera posicion, el algoritmo recorre la lista y al moverse a la segunda
+posicion, el 3 se mueve a la posicion uno, y asi con los demas numeros hasta encontrar un numero mayor con
+el que estamos comparando consecutivamente (5) en la tercera posicion nos encontramos con el 8
+por lo cual el algoritmo ahora toma el numero 8 y deja el 5 en la segunda posicion,
+como no hay numeros mayores que el 8, este lega hasta el final y se ubica en dicha posicion
+quednado [3, 5, 4, 2, 8]
+y repite el proceso verificando continuamente el orden correcto de los elementos
+
+
+
+sort2 uses: Merge sort
+
+How do you know?: Este es el algoritmo que menos dilato en ordenarse.
+
+Divide la lista de elementos en partes mas pequeñas, dividiendo los elementos
+en dos partes y ordena las partes de manera recursiva para combinarlas al final en una
+lista ordenada. El algoritmo de fusion (merge), es el más eficiente de los tres.
+Ex. [5, 3, 8, 4, 2]
+Fusiona 5 y 3 quedando como [3, 5]
+Luego [3, 5] con 8, quedando [3, 5, 8]
+Fusiona 4 y 2 quedando como [2 y 4]
+y finalmente fusiona las 2 mitades restantes [3, 5, 8] y [2, 4], quedando [2,3,4,5,8]
+
+
+
+sort3 uses: Selection Sort
+
+How do you know?: Este es el algoritmo que mas tiempo tomo en ordenarse,
+sin embargo en la lista ordenada, este fue mas lento que el sort1
+
+Este algoritmo encuentra el elemento mas pequeño de toda la lista y lo intercambia con el primer elemento,
+consecutivamente relimita el tamaño de lalista para que no se interactue con el elemento pequeño que se movio,
+y sigue interactuando de la misma manera hasta que todo este ordenado.
+Ex. [5, 3, 8, 4, 2]
+El algoritmo recorre la lista y el primer elemento pequeño que encuentra es el 2, el cual
+intercambia posiciones con el 5 quedando [2, 3, 8, 4, 5]
+luego se vuelve a recorrer la lista desde el 3 y el elemento mas pequeño que encuentra es este mismo, dejandolo en su psicion.
+luego vuelve a recorrer la lista desde el 8 y el elemento mas pequeño es el 4,
+intercambiando su posicion con el 8, quedando de esta manera: [2, 3, 4, 8, 5],
+y asi sucesivamente hasta tener la lista ordenada.

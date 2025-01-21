@@ -1,0 +1,3 @@
+Para calcular el aura de las canciones del Top 100, se tendria en cuenta la energía promedio, la valencia y la bailabilidad.
+
+Una forma eficiente para calcular el "aura" de un usuario es promediando las preferencias de x cantidad de personas.

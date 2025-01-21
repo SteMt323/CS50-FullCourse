@@ -1,0 +1,44 @@
+Los punteros son variables que apuntan a una direccion en una parte de la memoria.
+
+Dos conceptos son fundamentales para comprender el funcionamiento de los punteros:
+
+- El tamaño de todas variables y su posición en memoria.
+
+- Todo dato está almacenado a partir de una dirección de memoria. Esta dirección puede ser obtenida y manipulada también como un dato más.
+
+
+"&" Referenciar la variable "numerica".
+
+"*" Apuntar a la direccion de memoria.
+
+
+I- ¿Qué es un puntero?
+Un puntero es una variable que almacena la dirección de memoria de
+otra variable. En lugar de contener directamente un valor como lo
+haría una variable normal, un puntero contiene la ubicación en la
+memoria donde se encuentra almacenado ese valor.
+
+II- ¿Por qué son importantes los punteros?
+Los punteros son fundamentales en C por varias razones:
+
+- Eficiencia : Permiten manipular directamente la memoria, lo cual es
+muy eficiente.
+
+- Paso por referencia : Permiten que las funciones modifiquen
+los valores de las variables que se les pasan.
+
+- Manipulación de arrays : Facilitan la manipulación de arrays y cadenas.
+
+- Estructuras de datos dinámicas : Son esenciales para implementar estructuras
+como listas enlazadas, árboles y gráficos.
+
+III- Resumen de conceptos clave
+- Declaración : 'int *p;' declara un puntero 'p' que puede apuntar a un entero.
+
+- Asignación : 'p = &a;' hace que 'p' puntear a la dirección de 'a'.
+
+- Desreferenciación : *pacceda al valor almacenado en la dirección de
+memoria a la que apunta 'p'.
+
+- Modificación a través de un puntero : Cambie el valor de '*p' modifica
+la variable a la que apunta.

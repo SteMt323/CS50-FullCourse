@@ -1,0 +1,8 @@
+Normalmente los colores claros se asocian con el numero "1", y por el contrario con respecto a colores oscuros
+se asocian al numero 0;
+
+Para detectar los bordes de la imagen, hay que convertir la imagen a binario.
+Todo lo que tenga "1", puede reacionarse con un borde en la imagen.
+
+--SISTEMA NUMERICO HEXADECIMAL (HEX)--
+

@@ -1,0 +1,64 @@
+I- ¿Qué es realloc?
+
+   realloc es una función que permite redimensionar un bloque de memoria
+   previamente asignado con malloc, calloc, o una llamada previa a
+   realloc. Es decir, puedes aumentar o disminuir el tamaño del bloque
+   de memoria según sea necesario.
+
+II- ¿Cómo funciona realloc?
+
+    - Si el tamaño nuevo ( new_size) es mayor que el anterior, realloc intenta
+    ampliar el bloque de memoria. Si no hay suficiente espacio
+    contiguo, puede asignar un nuevo bloque en otro lugar, copiar el
+    contenido del bloque original al nuevo y liberar el bloque antiguo.
+
+    - Si el tamaño nuevo es menor, se recorta el tamaño del bloque, pero
+    el contenido existente se mantiene.
+
+    - Si realloc falla en asignar memoria, devuelve NULL, pero el
+    bloque original sigue siendo válido (no se pierde).
+
+III- Explicacion del code "realloc.c"
+
+    1. Asignación inicial :
+    
+       - Se asigna memoria para 5 enteros usando malloc.
+       - Se inicializan estos 5 elementos con valores del 1 al 5.
+    
+    2. Redimensionar el bloque de memoria :
+    
+       - Se usa realloc para redimensionar el bloque, de 5 enteros a 10.
+       - Si realloctiene éxito, se agregarán valores adicionales del 6 al 10.
+    
+    3. Verificación y manejo de errores :
+    
+       - Se verifica si realloc se devolvió NULL. Si es así, significa que
+       la reasignación falló y es importante manejar este caso adecuadamente.
+    
+    4. Liberación de la memoria :
+    
+       - Finalmente, se libera la memoria con free.
+
+IV- Casos especiales y buenas prácticas.
+
+    1. Reducción de tamaño :
+
+       - Si el nuevo tamaño es menor que el tamaño original, realloc
+       trunca el bloque de memoria. Los datos que caen fuera del nuevo
+       tamaño se pierden.
+
+    2. Expansión de tamaño :
+
+       - Si el nuevo tamaño es mayor, reallocintenta expandir el bloque
+       en su ubicación actual. Si no puede, asignará un nuevo bloque, copiará
+       los datos antiguos y liberará el bloque original.
+
+    3. Cuando ptresNULL :
+
+       - Si ptres así NULL, reallocse comporta como mallocy simplemente
+       asigna un nuevo bloque de memoria del tamaño solicitado.
+
+    4. Cuando new_sizees 0 :
+
+       - Si new_sizees 0, la mayoría de las implementaciones de realloc
+       liberan el bloque de memoria apuntado por ptry devuelven NULL.

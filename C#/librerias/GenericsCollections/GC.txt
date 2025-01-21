@@ -1,0 +1,40 @@
+	-----------LIBRERIAS DE C#-----------
+
+  	  ----System.Collections.Generic----
+
+--Concepto:
+
+	Esta librería proporciona funciones genéricas de colecciones,
+	las cuáles periten trabajar con estructuras de datos flexibles
+	y fuertemente tipadas sin la necesidad de realizar conversiones
+	de tipo manuales.
+
+--Utilidad:
+
+	Su utilidad e importancia se enfoca en que optimiza el rendimiento
+	y seguridad de tipos.
+
+--Funciones comunes:
+
+    -List<T>
+        --Concepto:
+            Es una lista dinámica que puede contener elementos de cualquier tipo,
+            permite redimensionar de manera automática, por lo que se evita el
+            trabajo de cambiar el tamaño de elementos que este puede contener.
+
+        --Utilidad:
+            Se utiliza cuando se necesita una lista dinámica donde se pueda
+            agregar, eliminar y acceder a los datos.
+
+        --Casos de uso:
+            - Cuando la cantidad de elementos no es fija.
+            - Cuando se necesite agregar o eliminar elemendos de forma dinámica
+            - Cuando el orden de los elementos es importante.
+
+    -Dictionary<TKey, TValue>
+
+    -Queue<T>
+
+    -Stack<T>
+
+    -HashSet<T>

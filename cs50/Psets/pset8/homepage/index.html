@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home Section</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <div class="logo">
+                <span>CS50</span>
+                </div>
+                <div class="nav-icons">
+                    <a href="index.html"><i class="fas fa-home"></i></a>
+                    <a href="gaming.html"><i class="fas fa-gamepad"></i></a>
+                    <a href="fitness.html"><i class="fas fa-dumbbell"></i></a>
+                    <a href="code.html"><i class="fas fa-code"></i></a>
+                    <div class="search-bar">
+                        <input placeholder="Search..." type="text"/>
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content">
+                <h1>WELCOME</h1>
+                <h2>MY HomePage</h2>
+                <h3>My Name is Steven :p</h3>
+                <div class="home-space">
+                    <span>I Love Gym <3</span>
+                </div>
+            </div>
+
+            <div class="background-image">
+                <img alt="Person walking in a minimalist landscape" height="500" src="https://storage.googleapis.com/a1aa/image/ixnydLybnDoCLZ2Xvq4CQzRSzcfKaxi8isUJ4jYJoWBhvlzJA.jpg" width="1000"/>
+            </div>
+        </div>
+        <script>
+            // Selecciona todos los iconos
+            const icons = document.querySelectorAll('.nav-icons a');
+
+            icons.forEach(icon => {
+                icon.addEventListener('click', () => {
+                    // Añade una clase de animación
+                    icon.classList.add('bounce');
+
+                    // Remueve la clase después de 0.5 segundos
+                    setTimeout(() => {
+                        icon.classList.remove('bounce');
+                    }, 500);
+                });
+            });
+        </script>
+
+    </body>
+</html>
