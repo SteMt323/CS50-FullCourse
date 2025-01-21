@@ -1,4 +1,5 @@
-![CS50 image]([https://ruta/a/imagen.png](https://www.google.com/url?sa=i&url=https%3A%2F%2Fapps.apple.com%2Fus%2Fapp%2Fcs50%2Fid1631064453&psig=AOvVaw1lvI_A8yn11vrJTOCvXKa4&ust=1737584607550000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCLDc3Zvth4sDFQAAAAAdAAAAABAE))
+![CS50 image](https://www.google.com/url?sa=i&url=https%3A%2F%2Fapps.apple.com%2Fus%2Fapp%2Fcs50%2Fid1631064453&psig=AOvVaw1lvI_A8yn11vrJTOCvXKa4&ust=1737584607550000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCLDc3Zvth4sDFQAAAAAdAAAAABAE)
+
 
 # CS50-FullCourse
 
